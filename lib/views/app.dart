@@ -41,10 +41,10 @@ class App extends GetView<AppController> {
               icon: Icon(Icons.home),
               label: '关注',
             ),
-            // BottomNavigationBarItem(
-            //   icon: Icon(Icons.home),
-            //   label: '云村',
-            // ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: '云村',
+            ),
           ],
         ),
       );

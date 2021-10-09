@@ -7,4 +7,5 @@ abstract class Routes {
   static const ME = '/me';
   static const FOLLOW = '/follow';
   static const YUN = '/yun';
+  static const LOGIN = '/login';
 }
