@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:music163/views/app_controller.dart';
+import 'package:music163/app_controller.dart';
 import 'package:music163/views/found/found_screen.dart';
 
 const List<Widget> list = [

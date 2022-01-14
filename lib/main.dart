@@ -10,6 +10,10 @@ void main() {
       debugShowCheckedModeBanner: false,
       getPages: AppPages.routes,
       unknownRoute: AppPages.notFound,
+      themeMode: ThemeMode.system,
+      theme: ThemeData(
+        primaryColor: const Color(0xFFC20C0C),
+      ),
     ),
   );
 }
