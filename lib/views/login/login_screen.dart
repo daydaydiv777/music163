@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:music163/routes/app_pages.dart';
 
 class LoginScreen extends GetView {
   const LoginScreen({Key? key}) : super(key: key);
@@ -54,7 +55,7 @@ class LoginScreen extends GetView {
               margin: baseMarginB,
               child: ElevatedButton(
                 onPressed: () {
-                  Get.to('/');
+                  Get.offNamed(Routes.APP);
                 },
                 child: Center(
                   child: Text(
@@ -64,8 +65,9 @@ class LoginScreen extends GetView {
                 ),
                 clipBehavior: Clip.antiAlias,
                 style: OutlinedButton.styleFrom(
-                    shape: const StadiumBorder(),
-                    backgroundColor: Colors.white),
+                  shape: const StadiumBorder(),
+                  backgroundColor: Colors.white,
+                ),
               ),
             ),
             Container(
