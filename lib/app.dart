@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:music163/app_controller.dart';
+import 'package:music163/views/common/app_drawer.dart';
+import 'package:music163/views/common/player_control_bar.dart';
 import 'package:music163/views/found/found_screen.dart';
+import 'package:music163/views/mine/mine_screen.dart';
 
 const List<Widget> list = [
   FoundScreen(),
   FoundScreen(),
-  FoundScreen(),
+  MineScreen(),
   FoundScreen(),
   FoundScreen(),
 ];
@@ -17,7 +20,19 @@ class App extends GetView<AppController> {
   Widget build(BuildContext context) {
     return Obx(() {
       return Scaffold(
-        body: list.elementAt(controller.bottomNavigationIndex.value),
+        body: Stack(
+          children: [
+            list.elementAt(controller.bottomNavigationIndex.value),
+            Positioned(
+              child: PlayerControlBar(),
+              bottom: 0,
+              left: 0,
+              right: 0,
+            )
+          ],
+        ),
+        backgroundColor: const Color(0xffEEEEEE),
+        drawer: AppDrawer(),
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           currentIndex: controller.bottomNavigationIndex.value,
