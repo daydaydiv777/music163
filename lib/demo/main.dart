@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:music163/demo/page_view_demo.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -51,6 +52,14 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const PageViewDemo();
+                }));
+              },
+              child: const Text('PageViewDemo'),
+            ),
             ElevatedButton(
               onPressed: () {
                 _animatedContainer.reverse(from: 1);
