@@ -16,7 +16,7 @@ class LoginScreen extends GetView {
       body: SafeArea(
         child: Column(
           children: [
-            const Expanded(child: Center(child: Text('Logo'))),
+            const Expanded(child: Center(child: FlutterLogo(size: 100))),
             Container(
               padding: const EdgeInsets.only(bottom: 20),
               child: Row(

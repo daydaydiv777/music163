@@ -20,6 +20,7 @@ class App extends GetView<AppController> {
   Widget build(BuildContext context) {
     return Obx(() {
       return Scaffold(
+        key: controller.appScaffoldKey,
         body: Stack(
           children: [
             list.elementAt(controller.bottomNavigationIndex.value),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:music163/public/styles.dart';
 
 const _defaultHeaderTitleStyle = TextStyle(
   fontSize: 18,
@@ -40,7 +39,7 @@ class HCardWidget extends StatelessWidget {
     Widget _headerRight = Container();
 
     if (headerSpan != null || headerSpanPrefixIcon != null) {
-      Container(
+      _headerRight = Container(
         height: 30,
         padding: const EdgeInsets.symmetric(horizontal: 14),
         decoration: BoxDecoration(
@@ -62,7 +61,7 @@ class HCardWidget extends StatelessWidget {
     }
 
     return Container(
-      padding: CommonStyle.basePadding,
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       decoration: const BoxDecoration(color: Colors.white),
       child: Column(
         children: [
